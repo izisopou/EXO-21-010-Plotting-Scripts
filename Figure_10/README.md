@@ -12,5 +12,5 @@ Create the final plot with all the canvases stitched together in one big canvas:
 
 .x Plot_All_Limits.C
 
-Inputs: limits/Limits_alpha0pXX/limits_freq_gg_pfdijet2017_alpha0pXX.root
+Inputs: limits/Limits_alpha0pXX/limits_freq_gg_pfdijet2017_alpha0pXX.root \
 Output: Figure_10.C, Figure_10.pdf
