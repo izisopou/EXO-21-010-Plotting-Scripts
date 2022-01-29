@@ -743,8 +743,9 @@ if __name__ == '__main__':
     elif len(Boxes)>1:
         l.DrawLatex(0.41,0.835,"CMS")
     else:
-        l.DrawLatex(0.23,0.835,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #0.23,0.835 w/o Preliminary
-        
+        #l.DrawLatex(0.23,0.835,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #for PAS - ilias
+        l.DrawLatex(0.27,0.835,"CMS") #for PAPER - ilias
+
     l.SetTextFont(52)
     #l.DrawLatex(0.28,0.92,"Preliminary")
     l.SetTextFont(42)
