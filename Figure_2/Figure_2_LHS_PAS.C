@@ -1,7 +1,7 @@
-void Figure_2_LHS()
+void Figure_2_LHS_PAS()
 {
 //=========Macro generated from canvas: pad67/
-//=========  (Sat Jan 29 10:51:20 2022) by ROOT version 6.12/07
+//=========  (Sat Jan 29 12:31:05 2022) by ROOT version 6.24/06
    TCanvas *pad67 = new TCanvas("pad67", "",80,71,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);

@@ -13,4 +13,6 @@ RHS plot:
 
 Inputs: HISTOS_2016_2017_2018_Robert.root, MinDR_slices_alphavsM4J.root
 
-Output: Figure_2_RHS.C, Figure_2_RHS.png, Figure_2_RHS.pdf
+Output: Figure_2_RHS_PAS.C, Figure_2_RHS_PAS.png, Figure_2_RHS_PAS.pdf (for PAS)
+	or
+	Figure_2_RHS_PAPER.C, Figure_2_RHS_PAPER.png, Figure_2_RHS_PAPER.pdf (for PAPER)
