@@ -1,8 +1,8 @@
-void Figure_4()
+void Figure_4_LHS_PAPER()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Thu Jan 27 17:25:41 2022) by ROOT version 6.24/06
-   TCanvas *c1 = new TCanvas("c1", "c1",80,71,800,800);
+//=========  (Sat Jan 29 15:08:14 2022) by ROOT version 6.12/07
+   TCanvas *c1 = new TCanvas("c1", "c1",80,71,800,717);
    gStyle->SetOptStat(0);
    c1->Range(-2.256271,-0.089375,11.88612,0.723125);
    c1->SetFillColor(0);
@@ -76,19 +76,19 @@ void Figure_4()
    h_mass8__1->GetXaxis()->SetNdivisions(512);
    h_mass8__1->GetXaxis()->SetLabelFont(42);
    h_mass8__1->GetXaxis()->SetLabelOffset(0.007);
-   h_mass8__1->GetXaxis()->SetTitleSize(0.04);
+   h_mass8__1->GetXaxis()->SetLabelSize(0.035);
    h_mass8__1->GetXaxis()->SetTitleOffset(1.2);
    h_mass8__1->GetXaxis()->SetTitleFont(42);
    h_mass8__1->GetYaxis()->SetTitle("Normalized yield/TeV");
    h_mass8__1->GetYaxis()->SetLabelFont(42);
    h_mass8__1->GetYaxis()->SetLabelOffset(0.007);
-   h_mass8__1->GetYaxis()->SetTitleSize(0.04);
+   h_mass8__1->GetYaxis()->SetLabelSize(0.035);
    h_mass8__1->GetYaxis()->SetTitleOffset(1.47);
    h_mass8__1->GetYaxis()->SetTitleFont(42);
    h_mass8__1->GetZaxis()->SetLabelFont(42);
    h_mass8__1->GetZaxis()->SetLabelOffset(0.007);
+   h_mass8__1->GetZaxis()->SetLabelSize(0.035);
    h_mass8__1->GetZaxis()->SetTitleSize(0.05);
-   h_mass8__1->GetZaxis()->SetTitleOffset(1);
    h_mass8__1->GetZaxis()->SetTitleFont(42);
    h_mass8__1->Draw(" hist");
    Double_t xAxis2[104] = {0.001, 0.003, 0.006, 0.01, 0.016, 0.023, 0.031, 0.04, 0.05, 0.061, 0.074, 0.088, 0.103, 0.119, 0.137, 0.156, 0.176, 0.197, 0.22, 0.244, 0.27, 0.296, 0.325, 0.354, 0.386, 0.419, 0.453, 0.489, 0.526, 0.565, 0.606, 0.649, 0.693, 0.74, 0.788, 0.838, 0.89, 0.944, 1, 1.058, 1.118, 1.181, 1.246, 1.313, 1.383, 1.455, 1.53, 1.607, 1.687, 1.77, 1.856, 1.945, 2.037, 2.132, 2.231, 2.332, 2.438, 2.546, 2.659, 2.775, 2.895, 3.019, 3.147, 3.279, 3.416, 3.558, 3.704, 3.854, 4.01, 4.171, 4.337, 4.509, 4.686, 4.869, 5.058, 5.253, 5.455, 5.663, 5.877, 6.099, 6.328, 6.564, 6.808, 7.06, 7.32, 7.589, 7.866, 8.152, 8.447, 8.752, 9.067, 9.391, 9.726, 10.072, 10.43, 10.798, 11.179, 11.571, 11.977, 12.395, 12.827, 13.272, 13.732, 14}; 
@@ -154,19 +154,19 @@ void Figure_4()
    h_mass8__2->GetXaxis()->SetNdivisions(512);
    h_mass8__2->GetXaxis()->SetLabelFont(42);
    h_mass8__2->GetXaxis()->SetLabelOffset(0.007);
-   h_mass8__2->GetXaxis()->SetTitleSize(0.04);
+   h_mass8__2->GetXaxis()->SetLabelSize(0.035);
    h_mass8__2->GetXaxis()->SetTitleOffset(1.2);
    h_mass8__2->GetXaxis()->SetTitleFont(42);
    h_mass8__2->GetYaxis()->SetTitle("Normalized yield/TeV");
    h_mass8__2->GetYaxis()->SetLabelFont(42);
    h_mass8__2->GetYaxis()->SetLabelOffset(0.007);
-   h_mass8__2->GetYaxis()->SetTitleSize(0.04);
+   h_mass8__2->GetYaxis()->SetLabelSize(0.035);
    h_mass8__2->GetYaxis()->SetTitleOffset(1.47);
    h_mass8__2->GetYaxis()->SetTitleFont(42);
    h_mass8__2->GetZaxis()->SetLabelFont(42);
    h_mass8__2->GetZaxis()->SetLabelOffset(0.007);
+   h_mass8__2->GetZaxis()->SetLabelSize(0.035);
    h_mass8__2->GetZaxis()->SetTitleSize(0.05);
-   h_mass8__2->GetZaxis()->SetTitleOffset(1);
    h_mass8__2->GetZaxis()->SetTitleFont(42);
    h_mass8__2->Draw("same hist");
    Double_t xAxis3[104] = {0.001, 0.003, 0.006, 0.01, 0.016, 0.023, 0.031, 0.04, 0.05, 0.061, 0.074, 0.088, 0.103, 0.119, 0.137, 0.156, 0.176, 0.197, 0.22, 0.244, 0.27, 0.296, 0.325, 0.354, 0.386, 0.419, 0.453, 0.489, 0.526, 0.565, 0.606, 0.649, 0.693, 0.74, 0.788, 0.838, 0.89, 0.944, 1, 1.058, 1.118, 1.181, 1.246, 1.313, 1.383, 1.455, 1.53, 1.607, 1.687, 1.77, 1.856, 1.945, 2.037, 2.132, 2.231, 2.332, 2.438, 2.546, 2.659, 2.775, 2.895, 3.019, 3.147, 3.279, 3.416, 3.558, 3.704, 3.854, 4.01, 4.171, 4.337, 4.509, 4.686, 4.869, 5.058, 5.253, 5.455, 5.663, 5.877, 6.099, 6.328, 6.564, 6.808, 7.06, 7.32, 7.589, 7.866, 8.152, 8.447, 8.752, 9.067, 9.391, 9.726, 10.072, 10.43, 10.798, 11.179, 11.571, 11.977, 12.395, 12.827, 13.272, 13.732, 14}; 
@@ -232,19 +232,19 @@ void Figure_4()
    h_mass8__3->GetXaxis()->SetNdivisions(512);
    h_mass8__3->GetXaxis()->SetLabelFont(42);
    h_mass8__3->GetXaxis()->SetLabelOffset(0.007);
-   h_mass8__3->GetXaxis()->SetTitleSize(0.04);
+   h_mass8__3->GetXaxis()->SetLabelSize(0.035);
    h_mass8__3->GetXaxis()->SetTitleOffset(1.2);
    h_mass8__3->GetXaxis()->SetTitleFont(42);
    h_mass8__3->GetYaxis()->SetTitle("Normalized yield/TeV");
    h_mass8__3->GetYaxis()->SetLabelFont(42);
    h_mass8__3->GetYaxis()->SetLabelOffset(0.007);
-   h_mass8__3->GetYaxis()->SetTitleSize(0.04);
+   h_mass8__3->GetYaxis()->SetLabelSize(0.035);
    h_mass8__3->GetYaxis()->SetTitleOffset(1.47);
    h_mass8__3->GetYaxis()->SetTitleFont(42);
    h_mass8__3->GetZaxis()->SetLabelFont(42);
    h_mass8__3->GetZaxis()->SetLabelOffset(0.007);
+   h_mass8__3->GetZaxis()->SetLabelSize(0.035);
    h_mass8__3->GetZaxis()->SetTitleSize(0.05);
-   h_mass8__3->GetZaxis()->SetTitleOffset(1);
    h_mass8__3->GetZaxis()->SetTitleFont(42);
    h_mass8__3->Draw("same hist");
    Double_t xAxis4[104] = {0.001, 0.003, 0.006, 0.01, 0.016, 0.023, 0.031, 0.04, 0.05, 0.061, 0.074, 0.088, 0.103, 0.119, 0.137, 0.156, 0.176, 0.197, 0.22, 0.244, 0.27, 0.296, 0.325, 0.354, 0.386, 0.419, 0.453, 0.489, 0.526, 0.565, 0.606, 0.649, 0.693, 0.74, 0.788, 0.838, 0.89, 0.944, 1, 1.058, 1.118, 1.181, 1.246, 1.313, 1.383, 1.455, 1.53, 1.607, 1.687, 1.77, 1.856, 1.945, 2.037, 2.132, 2.231, 2.332, 2.438, 2.546, 2.659, 2.775, 2.895, 3.019, 3.147, 3.279, 3.416, 3.558, 3.704, 3.854, 4.01, 4.171, 4.337, 4.509, 4.686, 4.869, 5.058, 5.253, 5.455, 5.663, 5.877, 6.099, 6.328, 6.564, 6.808, 7.06, 7.32, 7.589, 7.866, 8.152, 8.447, 8.752, 9.067, 9.391, 9.726, 10.072, 10.43, 10.798, 11.179, 11.571, 11.977, 12.395, 12.827, 13.272, 13.732, 14}; 
@@ -320,19 +320,19 @@ void Figure_4()
    h_mass8__4->GetXaxis()->SetNdivisions(512);
    h_mass8__4->GetXaxis()->SetLabelFont(42);
    h_mass8__4->GetXaxis()->SetLabelOffset(0.007);
-   h_mass8__4->GetXaxis()->SetTitleSize(0.04);
+   h_mass8__4->GetXaxis()->SetLabelSize(0.035);
    h_mass8__4->GetXaxis()->SetTitleOffset(1.2);
    h_mass8__4->GetXaxis()->SetTitleFont(42);
    h_mass8__4->GetYaxis()->SetTitle("Normalized yield/TeV");
    h_mass8__4->GetYaxis()->SetLabelFont(42);
    h_mass8__4->GetYaxis()->SetLabelOffset(0.007);
-   h_mass8__4->GetYaxis()->SetTitleSize(0.04);
+   h_mass8__4->GetYaxis()->SetLabelSize(0.035);
    h_mass8__4->GetYaxis()->SetTitleOffset(1.47);
    h_mass8__4->GetYaxis()->SetTitleFont(42);
    h_mass8__4->GetZaxis()->SetLabelFont(42);
    h_mass8__4->GetZaxis()->SetLabelOffset(0.007);
+   h_mass8__4->GetZaxis()->SetLabelSize(0.035);
    h_mass8__4->GetZaxis()->SetTitleSize(0.05);
-   h_mass8__4->GetZaxis()->SetTitleOffset(1);
    h_mass8__4->GetZaxis()->SetTitleFont(42);
    h_mass8__4->Draw("same hist");
    Double_t xAxis5[104] = {0.001, 0.003, 0.006, 0.01, 0.016, 0.023, 0.031, 0.04, 0.05, 0.061, 0.074, 0.088, 0.103, 0.119, 0.137, 0.156, 0.176, 0.197, 0.22, 0.244, 0.27, 0.296, 0.325, 0.354, 0.386, 0.419, 0.453, 0.489, 0.526, 0.565, 0.606, 0.649, 0.693, 0.74, 0.788, 0.838, 0.89, 0.944, 1, 1.058, 1.118, 1.181, 1.246, 1.313, 1.383, 1.455, 1.53, 1.607, 1.687, 1.77, 1.856, 1.945, 2.037, 2.132, 2.231, 2.332, 2.438, 2.546, 2.659, 2.775, 2.895, 3.019, 3.147, 3.279, 3.416, 3.558, 3.704, 3.854, 4.01, 4.171, 4.337, 4.509, 4.686, 4.869, 5.058, 5.253, 5.455, 5.663, 5.877, 6.099, 6.328, 6.564, 6.808, 7.06, 7.32, 7.589, 7.866, 8.152, 8.447, 8.752, 9.067, 9.391, 9.726, 10.072, 10.43, 10.798, 11.179, 11.571, 11.977, 12.395, 12.827, 13.272, 13.732, 14}; 
@@ -481,13 +481,18 @@ void Figure_4()
    h_qq_Suu10_Chi2500__5->SetLineWidth(2);
    h_qq_Suu10_Chi2500__5->GetXaxis()->SetTitle("Fourjet Mass [GeV]");
    h_qq_Suu10_Chi2500__5->GetXaxis()->SetLabelFont(42);
-   h_qq_Suu10_Chi2500__5->GetXaxis()->SetTitleOffset(1);
+   h_qq_Suu10_Chi2500__5->GetXaxis()->SetLabelSize(0.035);
+   h_qq_Suu10_Chi2500__5->GetXaxis()->SetTitleSize(0.035);
    h_qq_Suu10_Chi2500__5->GetXaxis()->SetTitleFont(42);
    h_qq_Suu10_Chi2500__5->GetYaxis()->SetTitle("Probability");
    h_qq_Suu10_Chi2500__5->GetYaxis()->SetLabelFont(42);
+   h_qq_Suu10_Chi2500__5->GetYaxis()->SetLabelSize(0.035);
+   h_qq_Suu10_Chi2500__5->GetYaxis()->SetTitleSize(0.035);
+   h_qq_Suu10_Chi2500__5->GetYaxis()->SetTitleOffset(0);
    h_qq_Suu10_Chi2500__5->GetYaxis()->SetTitleFont(42);
    h_qq_Suu10_Chi2500__5->GetZaxis()->SetLabelFont(42);
-   h_qq_Suu10_Chi2500__5->GetZaxis()->SetTitleOffset(1);
+   h_qq_Suu10_Chi2500__5->GetZaxis()->SetLabelSize(0.035);
+   h_qq_Suu10_Chi2500__5->GetZaxis()->SetTitleSize(0.035);
    h_qq_Suu10_Chi2500__5->GetZaxis()->SetTitleFont(42);
    h_qq_Suu10_Chi2500__5->Draw("same hist");
    
@@ -549,11 +554,11 @@ void Figure_4()
    TText *pt_LaTex = pt->AddText("0.24 < #alpha < 0.26");
    pt->Draw();
    
-   pt = new TPaveText(0.23,0.81,0.48,0.86,"brNDC");
+   pt = new TPaveText(0.18,0.81,0.43,0.86,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetTextSize(0.03);
-   pt_LaTex = pt->AddText("CMS Simulation #scale[0.9]{#it{#bf{Preliminary}}}");
+   pt_LaTex = pt->AddText("CMS Simulation");
    pt->Draw();
    
    pt = new TPaveText(0.82,0.915,0.97,0.965,"brNDC");
