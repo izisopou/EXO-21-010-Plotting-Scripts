@@ -20,7 +20,8 @@
 
 void Plot_All_3_Mass_Spectra(){
 
-TFile *f = new TFile("Mass_spectrum_panel_canvas.root","READ");
+//TFile *f = new TFile("Mass_spectrum_panel_canvas_PAS.root","READ"); //for PAS - ilias
+TFile *f = new TFile("Mass_spectrum_panel_canvas_PAPER.root","READ"); //for PAPER - ilias
 TFile *f_alpha7 = new TFile("Mass_spectrum_alpha7_canvas.root","READ");
 TFile *f_alpha8 = new TFile("Mass_spectrum_alpha8_canvas.root","READ");
 TFile *f_alpha9 = new TFile("Mass_spectrum_alpha9_canvas.root","READ");
@@ -109,8 +110,11 @@ y2->SetTextAngle(90);
 
 y2->Draw();
 
-canvas->SaveAs("Figure_6.pdf");
-canvas->SaveAs("Figure_6.C");
+//canvas->SaveAs("Figure_6_PAS.pdf");
+//canvas->SaveAs("Figure_6_PAS.C");
+
+canvas->SaveAs("Figure_6_PAPER.pdf");
+canvas->SaveAs("Figure_6_PAPER.C");
 
 }
 

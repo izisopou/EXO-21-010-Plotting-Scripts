@@ -1,7 +1,7 @@
-void Figure_6()
+void Figure_6_PAPER()
 {
 //=========Macro generated from canvas: canvas/
-//=========  (Fri Jan 28 17:43:22 2022) by ROOT version 6.24/06
+//=========  (Sat Jan 29 16:06:59 2022) by ROOT version 6.24/06
    TCanvas *canvas = new TCanvas("canvas", "",80,71,1500,1000);
    canvas->Range(0,0,1,1);
    canvas->SetFillColor(0);
@@ -133,7 +133,7 @@ void Figure_6()
    entry->SetMarkerSize(1);
    entry->SetTextFont(62);
    leg->Draw();
-   TLatex *   tex = new TLatex(0.07,0.35,"CMS #scale[0.7]{#it{#bf{Preliminary}}}");
+   TLatex *   tex = new TLatex(0.14,0.35,"CMS");
 tex->SetNDC();
    tex->SetTextSize(0.14);
    tex->SetLineWidth(2);

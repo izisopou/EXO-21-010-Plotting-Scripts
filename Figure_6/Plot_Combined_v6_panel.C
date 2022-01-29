@@ -748,7 +748,8 @@ l_cms->SetTextAlign(11);
 l_cms->SetTextSize(0.14);
 l_cms->SetNDC();
 l_cms->SetTextFont(62);
-l_cms->DrawLatex(0.07,0.35,"CMS #scale[0.7]{#it{#bf{Preliminary}}}");
+//l_cms->DrawLatex(0.07,0.35,"CMS #scale[0.7]{#it{#bf{Preliminary}}}"); //for PAS - ilias
+l_cms->DrawLatex(0.14,0.35,"CMS"); //for PAPER - ilias
 
 TLatex *l_lumi = new TLatex();
 l_lumi->SetTextAlign(11);
@@ -760,7 +761,8 @@ l_lumi->DrawLatex(0.783,0.82,"#bf{138 fb^{-1} (13 TeV)}");
 
 TFile *fout;
 
- fout = new TFile("Mass_spectrum_panel_canvas.root","RECREATE");
+// fout = new TFile("Mass_spectrum_panel_canvas_PAS.root","RECREATE"); 
+ fout = new TFile("Mass_spectrum_panel_canvas_PAPER.root","RECREATE"); 
 
 
 fout->cd();
