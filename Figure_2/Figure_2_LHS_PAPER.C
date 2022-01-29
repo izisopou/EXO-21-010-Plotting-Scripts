@@ -1,7 +1,7 @@
 void Figure_2_LHS_PAPER()
 {
 //=========Macro generated from canvas: pad67/
-//=========  (Sat Jan 29 12:29:38 2022) by ROOT version 6.24/06
+//=========  (Sat Jan 29 15:41:30 2022) by ROOT version 6.24/06
    TCanvas *pad67 = new TCanvas("pad67", "",80,71,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -476,7 +476,7 @@ void Figure_2_LHS_PAPER()
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetTextFont(42);
-   pt->SetTextSize(0.038);
+   pt->SetTextSize(0.042);
    TText *pt_LaTex = pt->AddText("#bf{CMS}");
    pt->Draw();
    

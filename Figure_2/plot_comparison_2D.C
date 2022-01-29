@@ -38,12 +38,12 @@ TPaveText *paveCMS2 = new TPaveText(0.65,0.96,0.87,0.99,"NDC");
  paveCMS2->SetBorderSize(0);
  paveCMS2->SetTextSize(0.04);*/
 
-//TPaveText *paveCMS = new TPaveText(0.2,0.85,0.4,0.9,"NDC"); //for PAPER - ilias
-TPaveText *paveCMS = new TPaveText(0.25,0.85,0.45,0.9,"NDC"); //for PAS - ilias
+TPaveText *paveCMS = new TPaveText(0.2,0.85,0.4,0.9,"NDC"); //for PAPER - ilias
+//TPaveText *paveCMS = new TPaveText(0.25,0.85,0.45,0.9,"NDC"); //for PAS - ilias
  //paveCMS->AddText("#splitline{CMS}{Preliminary}");
 paveCMS->SetTextFont(42); // or 43  (the last digit refers to how you express the size if infraction or points○
-//paveCMS->AddText("#bf{CMS Simulation}"); //for PAPER - ilias
-paveCMS->AddText("#bf{CMS Simulation} #scale[0.7]{#it{Preliminary}}"); //for PAS - ilias
+paveCMS->AddText("#bf{CMS Simulation}"); //for PAPER - ilias
+//paveCMS->AddText("#bf{CMS Simulation} #scale[0.7]{#it{Preliminary}}"); //for PAS - ilias
  paveCMS->SetFillColor(0);
  paveCMS->SetBorderSize(0);
  paveCMS->SetTextSize(0.038);
@@ -327,12 +327,12 @@ l13->Draw("same");
 
 
 
- pad67->SaveAs("Figure_2_RHS_PAS.C");
- pad67->SaveAs("Figure_2_RHS_PAS.png");
- pad67->SaveAs("Figure_2_RHS_PAS.pdf");
+ //pad67->SaveAs("Figure_2_RHS_PAS.C");
+ //pad67->SaveAs("Figure_2_RHS_PAS.png");
+ //pad67->SaveAs("Figure_2_RHS_PAS.pdf");
 
- //pad67->SaveAs("Figure_2_RHS_PAPER.C");
- //pad67->SaveAs("Figure_2_RHS_PAPER.png");
- //pad67->SaveAs("Figure_2_RHS_PAPER.pdf");
+ pad67->SaveAs("Figure_2_RHS_PAPER.C");
+ pad67->SaveAs("Figure_2_RHS_PAPER.png");
+ pad67->SaveAs("Figure_2_RHS_PAPER.pdf");
 
 }
