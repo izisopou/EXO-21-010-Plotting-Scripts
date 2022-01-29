@@ -1096,7 +1096,8 @@ if __name__ == '__main__':
     l_cms.SetTextSize(0.14)
     l_cms.SetNDC()
     l_cms.SetTextFont(62)
-    l_cms.DrawLatex(0.087,0.5,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #0.11, 0.83 w/o Preliminary
+    #l_cms.DrawLatex(0.087,0.5,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #for PAS - ilias
+    l_cms.DrawLatex(0.133,0.5,"CMS") #for PAPER - ilias
 
     l_lumi = rt.TLatex()
     l_lumi.SetTextAlign(11)
@@ -1114,10 +1115,14 @@ if __name__ == '__main__':
     leg_arxiv1.Draw("SAME")
     leg_arxiv2.Draw("SAME")
 
-    panel.SaveAs("limits/Information_panel.png")
-    panel.SaveAs("limits/Information_panel.pdf")
+    #panel.SaveAs("limits/Information_panel_PAS.png")
+    #panel.SaveAs("limits/Information_panel_PAS.pdf")
 
-    outFile = rt.TFile.Open("limits/Information_panel.root","recreate")
+    panel.SaveAs("limits/Information_panel_PAPER.png")
+    panel.SaveAs("limits/Information_panel_PAPER.pdf")
+
+    #outFile = rt.TFile.Open("limits/Information_panel_PAS.root","recreate")
+    outFile = rt.TFile.Open("limits/Information_panel_PAPER.root","recreate")
     outFile.cd()
     panel.Write()
 
