@@ -1,7 +1,7 @@
-void Figure_14()
+void Figure_14_PAPER()
 {
 //=========Macro generated from canvas: c1/Signal region Data & Prediction
-//=========  (Thu Jan 27 20:58:00 2022) by ROOT version 6.24/06
+//=========  (Sat Jan 29 17:34:36 2022) by ROOT version 6.24/06
    TCanvas *c1 = new TCanvas("c1", "Signal region Data & Prediction",130,121,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -22,7 +22,7 @@ void Figure_14()
    TPad *c1_1 = new TPad("c1_1", "Signal region Data & Prediction_1",0.01,0.37,0.99,0.98);
    c1_1->Draw();
    c1_1->cd();
-   c1_1->Range(3.010194,-9.823909,4.00732,4.727574);
+   c1_1->Range(3.010194,-9.823909,4.00732,5.040509);
    c1_1->SetFillColor(0);
    c1_1->SetBorderMode(0);
    c1_1->SetBorderSize(2);
@@ -32,7 +32,7 @@ void Figure_14()
    c1_1->SetTicky(1);
    c1_1->SetLeftMargin(0.175);
    c1_1->SetRightMargin(0.05);
-   c1_1->SetTopMargin(0.05);
+   c1_1->SetTopMargin(0.07);
    c1_1->SetBottomMargin(0);
    c1_1->SetFrameFillStyle(0);
    c1_1->SetFrameBorderMode(0);
@@ -1373,7 +1373,7 @@ void Figure_14()
    
    grae->Draw(" ep");
    
-   TLegend *leg = new TLegend(0.6,0.6,0.8,0.9,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.6,0.58,0.8,0.88,NULL,"brNDC");
    leg->SetTextFont(62);
    leg->SetTextSize(0.04);
    leg->SetLineColor(1);
@@ -1466,13 +1466,13 @@ void Figure_14()
    entry->SetMarkerSize(1);
    entry->SetTextFont(62);
    leg->Draw();
-   TLatex *   tex = new TLatex(0.2,0.88,"#bf{CMS} #scale[0.7]{#it{Preliminary}}");
+   TLatex *   tex = new TLatex(0.23,0.84,"#bf{CMS}");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.055);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.68,0.953,"138 fb^{-1} (13 TeV)");
+      tex = new TLatex(0.69,0.953,"138 fb^{-1} (13 TeV)");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.055);

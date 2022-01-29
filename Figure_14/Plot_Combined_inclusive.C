@@ -408,7 +408,7 @@ shape_qg_binned->SetLineColor(4);
 	pull_qg->SetLineStyle(2);
 	pull_qg->SetLineColor(4);			
 
-        TLegend *leg = new TLegend(0.6,0.6,0.8,0.9);
+        TLegend *leg = new TLegend(0.6,0.58,0.8,0.88); //0.6,0.6,0.8,0.9
         leg->AddEntry(signal_datag,   "Data ","pe");
         leg->AddEntry(h_MC,  "LO QCD MC","l");
         leg->AddEntry(Standard_Fit_atlas,  "PowExp-5p fit","l");
@@ -491,7 +491,7 @@ leg2->SetTextSize(0.04);
 	pad1r = c1->GetPad(1);
 	pad1r->SetPad(0.01,0.37,0.99,0.98);
 	pad1r->SetRightMargin(0.05);
-	pad1r->SetTopMargin(0.05); //0.05
+	pad1r->SetTopMargin(0.07); //0.05
 	pad1r->SetLeftMargin(0.175);
 	pad1r->SetFillColor(0);
 	pad1r->SetBorderMode(0);
@@ -568,8 +568,9 @@ TPaveText *pave3 = new TPaveText(0.2,0.7,0.5,0.8,"NDC");
     l->SetTextFont(42);*/
 
 l->SetTextFont(42); // or 43  (the last digit refers to how you express the size if infraction or points○
-l->DrawLatex(0.2,0.88,"#bf{CMS} #scale[0.7]{#it{Preliminary}}");
-    l->DrawLatex(0.68,0.953,"138 fb^{-1} (13 TeV)"); //0.68,0.953,"138 fb^{-1} (13 TeV)
+//l->DrawLatex(0.23,0.84,"#bf{CMS} #scale[0.7]{#it{Preliminary}}"); //for PAS - ilias
+l->DrawLatex(0.23,0.84,"#bf{CMS}"); //for PAPER - ilias
+    l->DrawLatex(0.690,0.953,"138 fb^{-1} (13 TeV)"); //0.68,0.953,"138 fb^{-1} (13 TeV)
 	//paveCMS2->Draw("same");
 	shape_gg_binned->Draw("same hist ][");
         shape_qq_binned->Draw("same hist ][");
@@ -698,9 +699,13 @@ l->DrawLatex(0.2,0.88,"#bf{CMS} #scale[0.7]{#it{Preliminary}}");
 	//c1->SaveAs(Pred_pdf);
 	//c1->SaveAs(Pred_png);
 
-	c1->SaveAs("Figure_14.png");
-	c1->SaveAs("Figure_14.pdf");
-	c1->SaveAs("Figure_14.C");
+	//c1->SaveAs("Figure_14_PAS.png");
+	//c1->SaveAs("Figure_14_PAS.pdf");
+	//c1->SaveAs("Figure_14_PAS.C");
+
+	c1->SaveAs("Figure_14_PAPER.png");
+	c1->SaveAs("Figure_14_PAPER.pdf");
+	c1->SaveAs("Figure_14_PAPER.C");
 
 //TFile *fout;
 
