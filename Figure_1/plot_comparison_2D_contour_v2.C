@@ -267,8 +267,8 @@ paveCMS2->Draw("same");
 
 
 
- pad67->SaveAs("Figure_1.C");
- pad67->SaveAs("Figure_1.png");
- pad67->SaveAs("Figure_1.pdf");
+ pad67->SaveAs("Figure_1_PAS.C");
+ pad67->SaveAs("Figure_1_PAS.png");
+ pad67->SaveAs("Figure_1_PAS.pdf");
 
 }

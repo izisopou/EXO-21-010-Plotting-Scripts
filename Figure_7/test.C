@@ -18,7 +18,7 @@
 #include "TROOT.h"
 #include "TMath.h"
 #include "TLatex.h"
-#include "setTDRStyle_teliko.C"
+#include "setTDRStyle.C"
 
 void test(){
 
@@ -26,8 +26,8 @@ void test(){
 	 double startit	     = 1607;
 	 double endit	     = 9067;
 	 double startit_RM   = 1607;
-	gROOT->LoadMacro("setTDRStyle_teliko.C");
-	setTDRStyle_teliko();
+	gROOT->LoadMacro("setTDRStyle.C");
+	setTDRStyle();
 	 //gStyle->SetOptFit(1111);
 	  
 	double gg_8TeV_obs_limit = 0.0000024;
@@ -42,10 +42,10 @@ void test(){
 	 
 	 
 	 //ROOT::Math::MinimizerOptions::SetDefaultMaxFunctionCalls( 20000);   //set the number of parameter searches for convergence
-
+/*
 	char *image_name = "_2016_2017_Shapes_tot_err_alpha12_proper";
 
-	TFile *f_RM= new TFile("13bins/13bins/HISTOS_4J_Alldata_SR_alphabin2.root");
+	TFile *f_RM= new TFile("HISTOS_4J_Alldata_SR_alphabin2.root");
 	TFile *f_SF_atlas= new TFile("DijetFitResult_PFDijet2017_4J_alphabin2_atlas_test.root");
         TFile *f_SF_dijet= new TFile("DijetFitResult_PFDijet2017_4J_alphabin2_dijet_test.root");
         TFile *f_SF_moddijet= new TFile("DijetFitResult_PFDijet2017_4J_alphabin2_moddijet_test.root");
@@ -65,7 +65,7 @@ void test(){
 //TFile *f_alpha12= new TFile("test_pulls_alpha12.root");
 //TFile *f_alpha12= new TFile("test_pulls_alpha12.root");
 // Initial roofit /afs/cern.ch/work/m/mdiamant/public/forNiki/alphagt0p1/atlas/DijetFitResults_PFDijet2017_4J_alphabin7.root");
-
+*/
 	double massBoundaries[104] = {1, 3, 6, 10, 16, 23, 31, 40, 50, 61, 74, 88, 103, 119, 137, 156, 176, 197, 220, 244, 270, 296, 325,
      354, 386, 419, 453, 489, 526, 565, 606, 649, 693, 740, 788, 838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607,
      1687,1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337,
@@ -78,7 +78,7 @@ void test(){
         //TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
       //  TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
        
-        TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
+     //   TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
         //TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
 //TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
         //TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
@@ -88,8 +88,8 @@ void test(){
        // TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
 //TH1D *pull_SF_moddijet_alpha12 	      = (TH1D*)(f_alpha12->Get("h_FourjetMass"));
 	
-	Blank->SetMarkerColor(0); 		 //use this white-empty histogram to add blank entries on legend.
-	Blank->SetLineColor(0);
+//	Blank->SetMarkerColor(0); 		 //use this white-empty histogram to add blank entries on legend.
+//	Blank->SetLineColor(0);
 
 
 
@@ -113,13 +113,13 @@ TPaveText *pave = new TPaveText(0.1,0.0,1.,0.91,"NDC");
 //pave->SetLineColor(0);
 
 pave->SetFillColor(0);
-pave->SetLineColor(1);
-pave->SetBorderSize(1);
-pave->SetFillStyle(4100);
+//pave->SetLineColor(1);
+//pave->SetBorderSize(1);
+//pave->SetFillStyle(4100);
 pave->SetTextFont(42);
 pave->SetTextSize(0.12);
 pave->AddText("#bf{CMS} #scale[0.7]{#it{Preliminary}} ");
-pave->AddText("Y -> XX -> (jj) (jj)");
+pave->AddText("Y #rightarrow XX #rightarrow (jj) (jj)");
 pave->AddText("#bf{#bf{#alpha = Average dijet mass/Four-jet mass}}");
 //pave->AddLine(0.2,0,0.2,0.99);
 //pave->SetBorderSize(2);
@@ -128,7 +128,7 @@ pave->Draw("");
 
 TLegend *leg32 = new TLegend(0.6,0.92,0.98,0.93);
 leg32->SetTextFont(42);
-leg32->AddEntry(Blank,"#bf{#bf{138 fb^{-1} (13TeV)}}");
+leg32->AddEntry((TObject*)0,"#bf{#bf{138 fb^{-1} (13TeV)}}","");
 leg32->SetBorderSize(0);
 leg32->SetTextSize(0.1);
 leg32->Draw("same");
@@ -643,7 +643,7 @@ TLatex *xLab1 = new TLatex();
 
 TFile *fout;
 
- fout = new TFile("pad1_margin_V3.root","RECREATE");
+ fout = new TFile("pad1_margin_V3_test.root","RECREATE");
 
 
 fout->cd();

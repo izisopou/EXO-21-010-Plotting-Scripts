@@ -1,7 +1,7 @@
-void Figure_7()
+void Figure_7_PAPER()
 {
 //=========Macro generated from canvas: c/Signal region Data & Prediction
-//=========  (Fri Jan 28 18:38:21 2022) by ROOT version 6.24/06
+//=========  (Sat Jan 29 20:23:38 2022) by ROOT version 6.24/06
    TCanvas *c = new TCanvas("c", "Signal region Data & Prediction",80,71,3000,4300);
    gStyle->SetOptStat(0);
    c->Range(0,0,1,1);
@@ -11,7 +11,7 @@ void Figure_7()
    c->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: info_panel
-   TPad *info_panel = new TPad("info_panel", "info_panel",0.075,0.89,1,0.99);
+   TPad *info_panel = new TPad("info_panel", "info_panel",0.075,0.89,1,1);
    info_panel->Draw();
    info_panel->cd();
    info_panel->Range(0,0,1,1);
@@ -31,7 +31,7 @@ void Figure_7()
    Xaxis_panel->SetBorderMode(0);
    Xaxis_panel->SetBorderSize(2);
    Xaxis_panel->SetFrameBorderMode(0);
-   TLatex *   tex = new TLatex(0.67,0.07,"#font[42]{Four-jet mass [TeV]}");
+   TLatex *   tex = new TLatex(0.685,0.108,"#font[42]{Four-jet mass [TeV]}");
    tex->SetTextSize(0.5);
    tex->SetLineWidth(2);
    tex->Draw();
@@ -63,27 +63,24 @@ void Figure_7()
    pad_pull1->SetFillColor(0);
    pad_pull1->SetBorderMode(0);
    pad_pull1->SetBorderSize(2);
-   pad_pull1->SetTickx(1);
-   pad_pull1->SetTicky(1);
    pad_pull1->SetLeftMargin(0);
    pad_pull1->SetRightMargin(0);
    pad_pull1->SetTopMargin(0.02);
    pad_pull1->SetBottomMargin(0);
-   pad_pull1->SetFrameFillStyle(0);
    pad_pull1->SetFrameBorderMode(0);
    
-   TPaveText *pt = new TPaveText(0.1,0,1,0.91,"brNDC");
+   TPaveText *pt = new TPaveText(0.1,0,1,0.88,"brNDC");
    pt->SetBorderSize(1);
    pt->SetFillColor(0);
    pt->SetFillStyle(4100);
    pt->SetTextFont(42);
    pt->SetTextSize(0.12);
-   TText *pt_LaTex = pt->AddText("#bf{CMS} #scale[0.7]{#it{Preliminary}} ");
-   pt_LaTex = pt->AddText("Y -> XX -> (jj) (jj)");
+   TText *pt_LaTex = pt->AddText("#bf{CMS}");
+   pt_LaTex = pt->AddText("Y #rightarrow XX #rightarrow (jj) (jj)");
    pt_LaTex = pt->AddText("#bf{#bf{#alpha = Average dijet mass/Four-jet mass}}");
    pt->Draw();
    
-   TLegend *leg = new TLegend(0.6,0.92,0.98,0.93,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.6,0.91,0.98,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextSize(0.1);
    leg->SetLineColor(1);
@@ -91,11 +88,12 @@ void Figure_7()
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("h_FourjetMass","#bf{#bf{138 fb^{-1} (13TeV)}}","lpf");
-   entry->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("NULL","#bf{#bf{138 fb^{-1} (13 TeV)}}","");
+   entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
-   entry->SetMarkerStyle(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    leg->Draw();
@@ -1198,7 +1196,7 @@ void Figure_7()
    c->cd();
   
 // ------------>Primitives in pad: pad_pull8
-   TPad *pad_pull8 = new TPad("pad_pull8", "pad_pull8",0.55,0.83,0.97,0.96);
+   TPad *pad_pull8 = new TPad("pad_pull8", "pad_pull8",0.55,0.83,0.97,0.956);
    pad_pull8->Draw();
    pad_pull8->cd();
    pad_pull8->Range(3.206016,-2.99,3.957464,3.112041);

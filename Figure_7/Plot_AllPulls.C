@@ -25,7 +25,8 @@
 void Plot_AllPulls(){
 
 
-TFile *f_pull1 = new TFile("pad1_margin_V3.root","READ");
+//TFile *f_pull1 = new TFile("pad1_margin_V3_PAS.root","READ");
+TFile *f_pull1 = new TFile("pad1_margin_V3_PAPER.root","READ");
 TFile *f_pull2 = new TFile("pad2_margin_V3.root","READ");
 TFile *f_pull3 = new TFile("pad3_margin_V3.root","READ");
 TFile *f_pull4 = new TFile("pad4_margin_V3.root","READ");
@@ -60,7 +61,7 @@ TCanvas *c_pull13 = (TCanvas*)f_pull13->Get("c1");
 TCanvas *c_pull14 = (TCanvas*)f_pull14->Get("c1");
 
 
-TCanvas *canvas = new TCanvas("canvas","",3000,4300);	
+//TCanvas *canvas = new TCanvas("canvas","",3000,4300);	
 
 //gStyle->SetLineScalePS(1);
 gStyle->SetOptStat(0);
@@ -74,7 +75,7 @@ TCanvas *c = new TCanvas("c","Signal region Data & Prediction",3000,4300);
 
 
 
-TPad *info_panel = new TPad("info_panel", "info_panel", 0.075, 0.89, 1, 0.99);
+TPad *info_panel = new TPad("info_panel", "info_panel", 0.075, 0.89, 1, 1.);
 TPad *Xaxis_panel = new TPad("Xaxis_panel", "Xaxis_panel", 0.05, 0, 1, 0.047);
 TPad *Yaxis_panel = new TPad("Yaxis_panel", "Yaxis_panel", 0, 0, 0.08, 0.9);
 
@@ -89,7 +90,7 @@ TPad *pad_pull6 = new TPad("pad_pull6","pad_pull6",0.08,0.18,0.55,0.31);
 TPad *pad_pull7 = new TPad("pad_pull7","pad_pull7",0.08,0.03,0.55,0.18);
 
 
-TPad *pad_pull8 = new TPad("pad_pull8","pad_pull8",0.55,0.83,0.97,0.96);
+TPad *pad_pull8 = new TPad("pad_pull8","pad_pull8",0.55,0.83,0.97,0.956); //0.96
 
 TPad *pad_pull9 = new TPad("pad_pull9","pad_pull9",0.55,0.7,0.97,0.83);
 
@@ -253,7 +254,7 @@ c_pull14->DrawClonePad();
 
 Xaxis_panel->cd();
 
-TLatex *x = new TLatex(0.67, 0.07, "#font[42]{Four-jet mass [TeV]}");
+TLatex *x = new TLatex(0.685, 0.108, "#font[42]{Four-jet mass [TeV]}");
 x->SetTextSize(0.5);
 
 x->Draw();
@@ -270,6 +271,9 @@ y->Draw();
 //TFile *output = new TFile("output.root","RECREATE"); 
 //c->Write();
 
-c->SaveAs("Figure_7.pdf");
-c->SaveAs("Figure_7.C");
+//c->SaveAs("Figure_7_PAS.pdf");
+//c->SaveAs("Figure_7_PAS.C");
+
+c->SaveAs("Figure_7_PAPER.pdf");
+c->SaveAs("Figure_7_PAPER.C");
 }
