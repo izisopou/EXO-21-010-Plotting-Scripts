@@ -26,10 +26,12 @@
  setTDRStyle();
 
                                      //0.14
- TPaveText *paveCMS = new TPaveText(0.2,0.85,0.4,0.9,"NDC");
+ //TPaveText *paveCMS = new TPaveText(0.2,0.85,0.4,0.9,"NDC"); //for PAS - ilias
+ TPaveText *paveCMS = new TPaveText(0.2,0.85,0.3,0.9,"NDC"); //for PAPER - ilias
  //paveCMS->AddText("#splitline{CMS}{Preliminary}");
 paveCMS->SetTextFont(42); // or 43  (the last digit refers to how you express the size if infraction or points○
-paveCMS->AddText("#bf{CMS} #scale[0.7]{#it{Preliminary}}");
+//paveCMS->AddText("#bf{CMS} #scale[0.7]{#it{Preliminary}}"); //for PAS - ilias
+paveCMS->AddText("#bf{CMS}"); //for PAPER - ilias
  paveCMS->SetFillColor(0);
  paveCMS->SetBorderSize(0);
  paveCMS->SetTextSize(0.04);
@@ -108,9 +110,6 @@ paveCMS6->AddText("|#Delta #eta| < 1.1");
 TFile *fin;
 fin = new TFile("HISTOS_2016_2017_2018_Robert.root","READ");
 
-TFile *finm;
-finm= new TFile("MinDR_slices_alphavsM4J.root","READ");
-
 //Robert.root alpha vs M4J=h_alpha_vs_M2J
  
   
@@ -126,7 +125,7 @@ Blank->SetLineColor(0);
 TFile *f = new TFile("contour68.root","READ");
 TH2D *hint=(TH2D*)(f->Get("h_M4J_vs_M2J"));
 
-TFile *f1 = new TFile("contour95.root","READ");
+TFile *f1 = new TFile("contour94.root","READ");
 TH2D *hint1=(TH2D*)(f1->Get("h_M4J_vs_M2J"));
 
 
@@ -267,8 +266,12 @@ paveCMS2->Draw("same");
 
 
 
- pad67->SaveAs("Figure_1_PAS.C");
- pad67->SaveAs("Figure_1_PAS.png");
- pad67->SaveAs("Figure_1_PAS.pdf");
+// pad67->SaveAs("Figure_1_PAS.C");
+// pad67->SaveAs("Figure_1_PAS.png");
+// pad67->SaveAs("Figure_1_PAS.pdf");
+
+ pad67->SaveAs("Figure_1_PAPER.C");
+ pad67->SaveAs("Figure_1_PAPER.png");
+ pad67->SaveAs("Figure_1_PAPER.pdf");
 
 }

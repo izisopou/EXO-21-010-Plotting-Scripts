@@ -1,7 +1,7 @@
-void Figure_1_PAS()
+void Figure_1_PAPER()
 {
 //=========Macro generated from canvas: pad67/
-//=========  (Mon Jan 31 13:04:31 2022) by ROOT version 6.24/06
+//=========  (Mon Jan 31 13:13:05 2022) by ROOT version 6.24/06
    TCanvas *pad67 = new TCanvas("pad67", "",80,71,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -2017,7 +2017,7 @@ void Figure_1_PAS()
    pt->SetFillColor(0);
    pt->SetTextFont(42);
    pt->SetTextSize(0.04);
-   TText *pt_LaTex = pt->AddText("#bf{CMS} #scale[0.7]{#it{Preliminary}}");
+   TText *pt_LaTex = pt->AddText("#bf{CMS}");
    pt->Draw();
    
    pt = new TPaveText(0,0,0,0,"brNDC");
