@@ -4,7 +4,9 @@ LHS plot:
 
 Inputs: HISTOS_2016_2017_2018_Robert.root, MinDR_slices_alphavsM4J.root
 
-Output: Figure_2_LHS.C, Figure_2_LHS.png, Figure_2_LHS.pdf
+Output: Figure_2_LHS_PAS.C, Figure_2_LHS_PAS.png, Figure_2_LHS_PAS.pdf \
+	or \
+	Figure_2_LHS_PAPER.C, Figure_2_LHS_PAPER.png, Figure_2_LHS_PAPER.pdf
 
 
 RHS plot:
@@ -13,6 +15,6 @@ RHS plot:
 
 Inputs: HISTOS_2016_2017_2018_Robert.root, MinDR_slices_alphavsM4J.root
 
-Output: Figure_2_RHS_PAS.C, Figure_2_RHS_PAS.png, Figure_2_RHS_PAS.pdf (for PAS) \
+Output: Figure_2_RHS_PAS.C, Figure_2_RHS_PAS.png, Figure_2_RHS_PAS.pdf \
 	or \
-	Figure_2_RHS_PAPER.C, Figure_2_RHS_PAPER.png, Figure_2_RHS_PAPER.pdf (for PAPER)
+	Figure_2_RHS_PAPER.C, Figure_2_RHS_PAPER.png, Figure_2_RHS_PAPER.pdf
