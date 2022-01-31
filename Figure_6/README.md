@@ -2,16 +2,18 @@
 
 Inputs: HISTOS_4J_Alldata_SR_alphabin*.root (data), DijetFitResult_PFDijet2017_4J_alphabin*_*_test.root (fits with the 3 functions), QCD2017_Standardcuts_M4Jgt1p6_nobreak_alpha*.root (QCD MC), ResonanceShapes_Suu*_Chi*_SR_alphabin*.root (signal shapes) 
 
-Outputs: Mass_spectrum_alpha*_canvas.root (3 canvases)
+Output: Mass_spectrum_alpha*_canvas.root (3 canvases)
 
 .x Plot_Combined_v6_panel.C
 
 Inputs: HISTOS_4J_Alldata_SR_alphabin7.root (data), DijetFitResult_PFDijet2017_4J_alphabin7_*_test.root (fits with the 3 functions), QCD2017_Standardcuts_M4Jgt1p6_nobreak_alpha7.root (QCD MC), ResonanceShapes_Suu*_Chi*_SR_alphabin7.root (signal shapes) 
 
-Outputs: Mass_spectrum_panel_canvas.root (1 canvas)
+Output: Mass_spectrum_panel_canvas.root (1 canvas)
 
 .x Plot_All_3_Mass_Spectra.C
 
 Inputs: Mass_spectrum_alpha*_canvas.root, Mass_spectrum_panel_canvas.root
 
-Outputs: Figure_6.C, Figure_6.pdf
+Output: Figure_6_PAS.C, Figure_6_PAS.pdf \
+        or \ 
+        Figure_6_PAPER.C, Figure_6_PAPER.pdf
