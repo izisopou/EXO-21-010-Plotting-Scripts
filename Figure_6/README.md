@@ -15,5 +15,5 @@ Output: Mass_spectrum_panel_canvas.root (1 canvas)
 Inputs: Mass_spectrum_alpha*_canvas.root, Mass_spectrum_panel_canvas.root
 
 Output: Figure_6_PAS.C, Figure_6_PAS.pdf \
-        or \ 
+        or \
         Figure_6_PAPER.C, Figure_6_PAPER.pdf
