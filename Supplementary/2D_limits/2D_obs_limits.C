@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  1 16:54:58 2022) by ROOT version 6.24/06
-   TCanvas *c = new TCanvas("c", "c",180,71,1200,1200);
+//=========  (Tue Feb  1 17:54:09 2022) by ROOT version 6.24/06
+   TCanvas *c = new TCanvas("c", "c",130,71,1200,1200);
    gStyle->SetOptStat(0);
    c->Range(566.6667,0.05285714,10844.44,0.4814286);
    c->SetFillColor(0);
@@ -32,7 +32,7 @@
    hframe__1->GetXaxis()->SetTitleSize(0.05);
    hframe__1->GetXaxis()->SetTitleOffset(1);
    hframe__1->GetXaxis()->SetTitleFont(42);
-   hframe__1->GetYaxis()->SetTitle("M(X)/M(Y)");
+   hframe__1->GetYaxis()->SetTitle("#alpha_{true} = M(X)/M(Y)");
    hframe__1->GetYaxis()->SetLabelFont(42);
    hframe__1->GetYaxis()->SetLabelOffset(0.007);
    hframe__1->GetYaxis()->SetTitleSize(0.05);
@@ -3297,7 +3297,7 @@
    Graph2D->GetXaxis()->SetTitleSize(0.05);
    Graph2D->GetXaxis()->SetTitleOffset(1.2);
    Graph2D->GetXaxis()->SetTitleFont(42);
-   Graph2D->GetYaxis()->SetTitle(" M(X)/M(Y)");
+   Graph2D->GetYaxis()->SetTitle(" #alpha_{true} = M(X)/M(Y)");
    Graph2D->GetYaxis()->SetLabelFont(42);
    Graph2D->GetYaxis()->SetLabelOffset(0.007);
    Graph2D->GetYaxis()->SetTitleSize(0.05);

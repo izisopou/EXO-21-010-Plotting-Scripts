@@ -38,8 +38,8 @@ for(int alphap=11; alphap<=35; alphap=alphap+2)
 	sprintf(filename,"limits_freq_gg_pfdijet2017_alpha0p%d.root",alphap);
 	TFile *f = new TFile(filename,"READ");
 
-	//TGraph *g_lim = (TGraph*)f->Get("obs_gg_pfdijet2017");
-	TGraph *g_lim = (TGraph*)f->Get("exp_gg_pfdijet2017"); 
+	TGraph *g_lim = (TGraph*)f->Get("obs_gg_pfdijet2017");
+	//TGraph *g_lim = (TGraph*)f->Get("exp_gg_pfdijet2017"); 
 
 	for(int i=0; i<=70; i++) 
 	{
@@ -73,11 +73,11 @@ frame->GetXaxis()->SetTitleSize(0.05);
 frame->GetXaxis()->SetTitle("Four-jet resonance mass [TeV]");
 frame->GetYaxis()->SetTitleOffset(1.1);
 frame->GetYaxis()->SetTitleSize(0.05);
-frame->GetYaxis()->SetTitle("M(X)/M(Y)");
+frame->GetYaxis()->SetTitle("#alpha_{true} = M(X)/M(Y)");
 
 h_lim_M4J_vs_alpha->Draw("col same z");
-//h_lim_M4J_vs_alpha->SetTitle(" ; Four-jet resonance mass [TeV]; M(X)/M(Y); Observed #kern[0.1]{#sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]}");
-h_lim_M4J_vs_alpha->SetTitle(" ; Four-jet resonance mass [TeV]; M(X)/M(Y); Expected #kern[0.1]{#sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]}");
+h_lim_M4J_vs_alpha->SetTitle(" ; Four-jet resonance mass [TeV]; #alpha_{true} = M(X)/M(Y); Observed #kern[0.1]{#sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]}");
+//h_lim_M4J_vs_alpha->SetTitle(" ; Four-jet resonance mass [TeV]; #alpha_{true} = M(X)/M(Y); Expected #kern[0.1]{#sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]}");
 gPad->Update();
 h_lim_M4J_vs_alpha->GetZaxis()->SetRangeUser(0.0000005,0.05); //0.0000005,0.05
 h_lim_M4J_vs_alpha->GetZaxis()->SetTitleOffset(1.);
@@ -158,12 +158,12 @@ l->AddEntry(g_excl_obs,"#bf{Observed mass limit}","L");
 l->AddEntry(g_excl_exp,"#bf{Expected mass limit}","L");
 l->Draw();
 
-//c->SaveAs("2D_obs_limits.C");
-//c->SaveAs("2D_obs_limits.png");
-//c->SaveAs("2D_obs_limits.pdf");
+c->SaveAs("2D_obs_limits.C");
+c->SaveAs("2D_obs_limits.png");
+c->SaveAs("2D_obs_limits.pdf");
 
-c->SaveAs("2D_exp_limits.C");
-c->SaveAs("2D_exp_limits.png");
-c->SaveAs("2D_exp_limits.pdf");
+//c->SaveAs("2D_exp_limits.C");
+//c->SaveAs("2D_exp_limits.png");
+//c->SaveAs("2D_exp_limits.pdf");
 
 }
