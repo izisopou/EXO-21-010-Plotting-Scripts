@@ -1,7 +1,7 @@
 void Figure_2_RHS_PAPER()
 {
 //=========Macro generated from canvas: pad67/
-//=========  (Sat Jan 29 15:35:23 2022) by ROOT version 6.24/06
+//=========  (Tue Feb  1 18:46:21 2022) by ROOT version 6.24/06
    TCanvas *pad67 = new TCanvas("pad67", "",80,71,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -492,7 +492,7 @@ void Figure_2_RHS_PAPER()
    pt->SetFillColor(0);
    pt->SetTextFont(42);
    pt->SetTextSize(0.038);
-   TText *pt_LaTex = pt->AddText("#bf{CMS Simulation}");
+   TText *pt_LaTex = pt->AddText("#bf{CMS} #scale[0.7]{#it{Simulation}}");
    pt->Draw();
    
    pt = new TPaveText(0,0,0,0,"brNDC");

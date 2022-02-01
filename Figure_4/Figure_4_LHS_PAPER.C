@@ -1,7 +1,7 @@
 void Figure_4_LHS_PAPER()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Sat Jan 29 15:08:14 2022) by ROOT version 6.12/07
+//=========  (Tue Feb  1 19:08:40 2022) by ROOT version 6.12/07
    TCanvas *c1 = new TCanvas("c1", "c1",80,71,800,717);
    gStyle->SetOptStat(0);
    c1->Range(-2.256271,-0.089375,11.88612,0.723125);
@@ -554,11 +554,11 @@ void Figure_4_LHS_PAPER()
    TText *pt_LaTex = pt->AddText("0.24 < #alpha < 0.26");
    pt->Draw();
    
-   pt = new TPaveText(0.18,0.81,0.43,0.86,"brNDC");
+   pt = new TPaveText(0.17,0.81,0.42,0.86,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetTextSize(0.03);
-   pt_LaTex = pt->AddText("CMS Simulation");
+   pt_LaTex = pt->AddText("CMS #scale[0.9]{#it{#bf{Simulation}}}");
    pt->Draw();
    
    pt = new TPaveText(0.82,0.915,0.97,0.965,"brNDC");

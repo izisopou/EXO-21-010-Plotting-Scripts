@@ -46,10 +46,10 @@ double massBoundaries[nMassBins+1] = {1/1000., 3/1000., 6/1000., 10/1000., 16/10
      10430/1000.,
      10798/1000., 11179/1000., 11571/1000., 11977/1000., 12395/1000., 12827/1000., 13272/1000., 13732/1000., 14000/1000.};
 
-//TPaveText *cms1 = new TPaveText(0.23,0.81,0.48,0.86,"NDC"); //for PAS - ilias
-TPaveText *cms1 = new TPaveText(0.18,0.81,0.43,0.86,"NDC"); //for PAPER - ilias
-//cms1->AddText("CMS Simulation #scale[0.9]{#it{#bf{Preliminary}}}"); //for PAS - ilias
-cms1->AddText("CMS Simulation"); //for PAPER - ilias
+//TPaveText *cms1 = new TPaveText(0.22,0.81,0.47,0.86,"NDC"); //for PAS - ilias
+TPaveText *cms1 = new TPaveText(0.17,0.81,0.42,0.86,"NDC"); //for PAPER - ilias
+//cms1->AddText("CMS #scale[0.9]{#it{#bf{Simulation Preliminary}}}"); //for PAS - ilias
+cms1->AddText("CMS #scale[0.9]{#it{#bf{Simulation}}}"); //for PAPER - ilias
 cms1->SetBorderSize(0);
 cms1->SetFillColor(0);
 cms1->SetTextSize(0.03); //0.04 w/o Preliminary
