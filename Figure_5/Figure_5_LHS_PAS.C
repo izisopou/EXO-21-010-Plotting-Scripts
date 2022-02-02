@@ -1,7 +1,7 @@
 void Figure_5_LHS_PAS()
 {
 //=========Macro generated from canvas: cv/cv
-//=========  (Mon Jan 31 13:25:09 2022) by ROOT version 6.24/06
+//=========  (Wed Feb  2 11:28:21 2022) by ROOT version 6.24/06
    TCanvas *cv = new TCanvas("cv", "cv",130,121,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -410,7 +410,7 @@ void Figure_5_LHS_PAS()
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetTextSize(0.04);
-   pt_LaTex = pt->AddText("CMS Simulation #scale[0.9]{#it{#bf{Preliminary}}}");
+   pt_LaTex = pt->AddText("CMS #scale[0.9]{#it{#bf{Simulation Preliminary}}}");
    pt->Draw();
    
    pt = new TPaveText(0,0,0,0,"brNDC");

@@ -61,7 +61,7 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
   gr_accEff->SetMarkerStyle(25);
   gr_accEff->Draw("P"); //L*"); 
 
-  TLegend *leg1 =new TLegend(.90, .67, .60, .83); //.90, .75, .60, .93
+  TLegend *leg1 =new TLegend(0.57, 0.69, 0.87, 0.85); //.90, .75, .60, .93
   leg1->SetFillColor(0);
   leg1->SetBorderSize(0);
   leg1->SetTextSize(0.035);
@@ -73,24 +73,24 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
 
   leg1->Draw("same");
 
- TPaveText *paveCMS2 = new TPaveText(0.9,0.96,0.8,0.9,"NDC");
+ TPaveText *paveCMS2 = new TPaveText(0.805,0.92,0.905,0.95,"NDC");
  paveCMS2->AddText("#bf{13 TeV}");
  paveCMS2->SetFillColor(0);
  paveCMS2->SetBorderSize(0);
  paveCMS2->SetTextSize(0.04);
  paveCMS2->Draw();
 
- TPaveText *paveCMS = new TPaveText(0.2,0.85,0.4,0.85,"NDC"); //for PAS
-  paveCMS->AddText("CMS Simulation #scale[0.9]{#it{#bf{Preliminary}}}"); //for PAS
- //TPaveText *paveCMS = new TPaveText(0.07,0.85,0.4,0.85,"NDC"); //for PAPER
- //paveCMS->AddText("CMS Simulation"); //for PAPER
+ //TPaveText *paveCMS = new TPaveText(0.2,0.83,0.4,0.84,"NDC"); //for PAS
+  //paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation Preliminary}}}"); //for PAS
+ TPaveText *paveCMS = new TPaveText(0.135,0.83,0.335,0.84,"NDC"); //for PAPER
+ paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation}}}"); //for PAPER
 
  paveCMS->SetFillColor(0);
  paveCMS->SetBorderSize(0);
  paveCMS->SetTextSize(0.04);
  paveCMS->Draw();
 
- TPaveText *pave2 = new TPaveText(0.12,0.7, .44, .78,"NDC");
+ TPaveText *pave2 = new TPaveText(0.13,0.7, .45, .78,"NDC");
  pave2->SetTextAlign(11); //center alignment
  pave2->AddText("Diquark : S #rightarrow #chi #chi  #rightarrow (ug)(ug)" );
  pave2->AddText("M(#chi)/M(S) = 0.25");
@@ -102,13 +102,13 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
 
 // cv->SaveAs("accVSmass.pdf");
  
- cv->SaveAs("Figure_5_LHS_PAS.C");
- cv->SaveAs("Figure_5_LHS_PAS.pdf");
- cv->SaveAs("Figure_5_LHS_PAS.png");
+ //cv->SaveAs("Figure_5_LHS_PAS.C");
+ //cv->SaveAs("Figure_5_LHS_PAS.pdf");
+ //cv->SaveAs("Figure_5_LHS_PAS.png");
 
-// cv->SaveAs("Figure_5_LHS_PAPER.C");
-// cv->SaveAs("Figure_5_LHS_PAPER.pdf");
-// cv->SaveAs("Figure_5_LHS_PAPER.png");
+ cv->SaveAs("Figure_5_LHS_PAPER.C");
+ cv->SaveAs("Figure_5_LHS_PAPER.pdf");
+ cv->SaveAs("Figure_5_LHS_PAPER.png");
  
 
 }
