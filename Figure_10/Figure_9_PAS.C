@@ -1,7 +1,7 @@
 void limits_freq_gg_pfdijet2017_alpha0p25_HN_above_4500_smoothed_CCLE()
 {
 //=========Macro generated from canvas: c/c
-//=========  (Sat Jan 29 16:17:08 2022) by ROOT version 6.12/07
+//=========  (Fri Sep 24 12:04:11 2021) by ROOT version 6.12/07
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -1805,7 +1805,7 @@ void limits_freq_gg_pfdijet2017_alpha0p25_HN_above_4500_smoothed_CCLE()
    line->SetLineColor(ci);
    line->SetLineStyle(9);
    line->Draw();
-   TLatex *   tex = new TLatex(0.23,0.835,"CMS");
+   TLatex *   tex = new TLatex(0.23,0.835,"CMS #scale[0.7]{#it{#bf{Preliminary}}}");
 tex->SetNDC();
    tex->SetTextSize(0.035);
    tex->SetLineWidth(2);

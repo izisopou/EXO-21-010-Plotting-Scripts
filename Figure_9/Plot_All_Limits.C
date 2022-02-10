@@ -245,10 +245,10 @@ y->Draw();
 //TFile *output = new TFile("output.root","RECREATE"); 
 //canvas->Write();
 
-//canvas->SaveAs("Figure_10_PAS.pdf");
-//canvas->SaveAs("Figure_10_PAS.C");
+//canvas->SaveAs("Figure_9_PAS.pdf");
+//canvas->SaveAs("Figure_9_PAS.C");
 
-canvas->SaveAs("Figure_10_PAPER.pdf");
-canvas->SaveAs("Figure_10_PAPER.C");
+canvas->SaveAs("Figure_9_PAPER.pdf");
+canvas->SaveAs("Figure_9_PAPER.C");
 
 }
