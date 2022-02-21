@@ -65,7 +65,7 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
   leg1->SetFillColor(0);
   leg1->SetBorderSize(0);
   leg1->SetTextSize(0.035);
-  leg1->AddEntry(gr_acc, "all #alpha slices (eff =1)", "P");
+  leg1->AddEntry(gr_acc, "eff=1", "P");
   leg1->AddEntry(gr_accEff, "all #alpha slices", "P");
   leg1->AddEntry(gr_acc8, "0.24 < #alpha < 0.26 ", "P");
   leg1->AddEntry(gr_acc9, "0.26 < #alpha < 0.28 ", "P");
@@ -80,10 +80,10 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
  paveCMS2->SetTextSize(0.04);
  paveCMS2->Draw();
 
- //TPaveText *paveCMS = new TPaveText(0.2,0.83,0.4,0.84,"NDC"); //for PAS
-  //paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation Preliminary}}}"); //for PAS
- TPaveText *paveCMS = new TPaveText(0.135,0.83,0.335,0.84,"NDC"); //for PAPER
- paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation}}}"); //for PAPER
+ TPaveText *paveCMS = new TPaveText(0.2,0.83,0.4,0.84,"NDC"); //for PAS
+  paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation Preliminary}}}"); //for PAS
+ //TPaveText *paveCMS = new TPaveText(0.135,0.83,0.335,0.84,"NDC"); //for PAPER
+ //paveCMS->AddText("CMS #scale[0.9]{#it{#bf{Simulation}}}"); //for PAPER
 
  paveCMS->SetFillColor(0);
  paveCMS->SetBorderSize(0);
@@ -102,13 +102,13 @@ TGraph *gr_accEff = new TGraphAsymmErrors(8, mass, accEff);
 
 // cv->SaveAs("accVSmass.pdf");
  
- //cv->SaveAs("Figure_5_LHS_PAS.C");
- //cv->SaveAs("Figure_5_LHS_PAS.pdf");
- //cv->SaveAs("Figure_5_LHS_PAS.png");
+ cv->SaveAs("Figure_5_LHS_PAS.C");
+ cv->SaveAs("Figure_5_LHS_PAS.pdf");
+ cv->SaveAs("Figure_5_LHS_PAS.png");
 
- cv->SaveAs("Figure_5_LHS_PAPER.C");
- cv->SaveAs("Figure_5_LHS_PAPER.pdf");
- cv->SaveAs("Figure_5_LHS_PAPER.png");
+ //cv->SaveAs("Figure_5_LHS_PAPER.C");
+ //cv->SaveAs("Figure_5_LHS_PAPER.pdf");
+ //cv->SaveAs("Figure_5_LHS_PAPER.png");
  
 
 }

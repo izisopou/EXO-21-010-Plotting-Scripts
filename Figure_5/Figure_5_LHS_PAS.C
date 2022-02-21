@@ -1,7 +1,7 @@
 void Figure_5_LHS_PAS()
 {
 //=========Macro generated from canvas: cv/cv
-//=========  (Wed Feb  2 11:28:21 2022) by ROOT version 6.24/06
+//=========  (Mon Feb 21 10:24:15 2022) by ROOT version 6.24/06
    TCanvas *cv = new TCanvas("cv", "cv",130,121,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -362,7 +362,7 @@ void Figure_5_LHS_PAS()
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("Graph0","all #alpha slices (eff =1)","P");
+   TLegendEntry *entry=leg->AddEntry("Graph0","eff=1","P");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
