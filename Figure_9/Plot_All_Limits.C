@@ -24,8 +24,8 @@
 
 void Plot_All_Limits(){
 
-//TFile *f = new TFile("limits/Information_panel_PAS.root","READ"); //for PAS -ilias
-TFile *f = new TFile("limits/Information_panel_PAPER.root","READ"); //for PAPER -ilias
+TFile *f = new TFile("limits/Information_panel_PAS.root","READ"); //for PAS -ilias
+//TFile *f = new TFile("limits/Information_panel_PAPER.root","READ"); //for PAPER -ilias
 TFile *f_0p11 = new TFile("limits/Limits_alpha0p11/limits_freq_gg_pfdijet2017_alpha0p11.root","READ");
 TFile *f_0p13 = new TFile("limits/Limits_alpha0p13/limits_freq_gg_pfdijet2017_alpha0p13.root","READ");
 TFile *f_0p15 = new TFile("limits/Limits_alpha0p15/limits_freq_gg_pfdijet2017_alpha0p15.root","READ");
@@ -245,10 +245,10 @@ y->Draw();
 //TFile *output = new TFile("output.root","RECREATE"); 
 //canvas->Write();
 
-//canvas->SaveAs("Figure_9_PAS.pdf");
-//canvas->SaveAs("Figure_9_PAS.C");
+canvas->SaveAs("Figure_9_PAS.pdf");
+canvas->SaveAs("Figure_9_PAS.C");
 
-canvas->SaveAs("Figure_9_PAPER.pdf");
-canvas->SaveAs("Figure_9_PAPER.C");
+//canvas->SaveAs("Figure_9_PAPER.pdf");
+//canvas->SaveAs("Figure_9_PAPER.C");
 
 }

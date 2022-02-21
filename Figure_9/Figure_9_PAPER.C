@@ -1,7 +1,7 @@
-void Figure_10_PAPER()
+void Figure_9_PAPER()
 {
 //=========Macro generated from canvas: canvas/
-//=========  (Sat Jan 29 16:39:57 2022) by ROOT version 6.12/07
+//=========  (Mon Feb 21 11:04:31 2022) by ROOT version 6.12/07
    TCanvas *canvas = new TCanvas("canvas", "",80,71,3000,4000);
    canvas->Range(0,0,1,1);
    canvas->SetFillColor(0);
@@ -120,7 +120,7 @@ tex->SetNDC();
    entry->SetTextFont(42);
    leg->Draw();
    
-   leg = new TLegend(0.64,0.5,0.89,0.65,NULL,"brNDC");
+   leg = new TLegend(0.64,0.4,0.89,0.55,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextSize(0.12);
 
@@ -144,7 +144,7 @@ tex->SetNDC();
    entry->SetTextFont(42);
    leg->Draw();
    
-   leg = new TLegend(0.74,0.28,0.89,0.43,NULL,"brNDC");
+   leg = new TLegend(0.74,0.13,0.89,0.28,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextSize(0.12);
    leg->SetLineColor(0);
@@ -155,26 +155,6 @@ tex->SetNDC();
    leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
    entry=leg->AddEntry("NULL","y_{uu}=0.4, y_{#chi}=0.6","h");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   leg->Draw();
-   
-   leg = new TLegend(0.73,0.1,0.88,0.25,NULL,"brNDC");
-   leg->SetBorderSize(1);
-   leg->SetTextSize(0.12);
-   leg->SetLineColor(0);
-   leg->SetLineStyle(1);
-   leg->SetLineWidth(1);
-
-   ci = TColor::GetColor("#ffffff");
-   leg->SetFillColor(ci);
-   leg->SetFillStyle(1001);
-   entry=leg->AddEntry("NULL","arXiv:1810.09429","h");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
