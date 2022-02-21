@@ -743,9 +743,9 @@ if __name__ == '__main__':
     elif len(Boxes)>1:
         l.DrawLatex(0.41,0.835,"CMS")
     else:
-        #l.DrawLatex(0.23,0.835,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #for PAS - ilias
-        l.DrawLatex(0.27,0.835,"CMS") #for PAPER - ilias
-
+        l.DrawLatex(0.23,0.835,"CMS #scale[0.7]{#it{#bf{Preliminary}}}") #for PAS - ilias
+        #l.DrawLatex(0.23,0.835,"CMS") #for PAPER - ilias
+        
     l.SetTextFont(52)
     #l.DrawLatex(0.28,0.92,"Preliminary")
     l.SetTextFont(42)
@@ -848,9 +848,10 @@ if __name__ == '__main__':
     if not options.doSignificance:
         leg.SetHeader("95% CL limits")
 	leg_SigProc.SetHeader("Y #rightarrow XX #rightarrow (jj)(jj)")
-	leg_alpha.SetHeader("M(X) / M(Y) = 0.25")
+	leg_alpha.SetHeader("M(X) / M(Y) = %.2f"%(alphatrue))
 	leg_alpha.SetTextSize(0.035)
-	leg_arxiv.SetHeader("#splitline{y_{uu}=0.4, y_{#chi}=0.6}{arXiv:1810.09429}")
+	#leg_arxiv.SetHeader("#splitline{y_{uu}=0.4, y_{#chi}=0.6}{arXiv:1810.09429}")
+	leg_arxiv.SetHeader("y_{uu}=0.4, y_{#chi}=0.6")
 	leg_arxiv.SetTextSize(0.03)
     if len(models)==1:
         if options.doSignificance:
