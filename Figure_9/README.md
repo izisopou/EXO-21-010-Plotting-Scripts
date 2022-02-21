@@ -1,4 +1,4 @@
-Produce the individual 12 canvases with the same way as explained for Figure 9:
+Produce the individual 12 canvases with the same way as explained for Figure 10:
 
 python Plot1DLimit_for_HybridNew_final_smoothing_CCLE.py -d limits/Limits_alpha0pXX/ -m gg -b PFDijet2017 -l 138 --massMin 2000 --massMax 9000  --xsecMin 1e-5 --xsecMax 0.09 --alpha_true 0.XX
 
