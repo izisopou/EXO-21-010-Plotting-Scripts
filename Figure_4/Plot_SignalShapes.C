@@ -78,7 +78,7 @@ l->SetTextSize(0.03);
 //l->SetHeader("S_{uu} #rightarrow #chi#chi #rightarrow (ug)(ug)");
 
 
-TPaveText *t = new TPaveText(0.25,0.65,0.35,0.75,"NDC");
+TPaveText *t = new TPaveText(0.67,0.42,0.77,0.52,"NDC"); //0.25,0.65,0.35,0.75,"NDC"
 t->AddText("0.24 < #alpha < 0.26");
 t->SetBorderSize(0);
 t->SetFillColor(0);
@@ -178,7 +178,7 @@ for (int mass=2000; mass<=8000; mass=mass+2000)
 	h_mass5->Scale(1./h_mass5->Integral());
 	h_mass6->Scale(1./h_mass6->Integral());
 	h_mass7->Scale(1./h_mass7->Integral());
-	h_mass8->Scale(1./h_mass8->Integral());
+	//h_mass8->Scale(1./h_mass8->Integral());
 	h_mass9->Scale(1./h_mass9->Integral());
 	h_mass10->Scale(1./h_mass10->Integral());
 	h_mass11->Scale(1./h_mass11->Integral());
@@ -191,13 +191,35 @@ for (int mass=2000; mass<=8000; mass=mass+2000)
 	//Central slice for signals with alpha=0.25
 	histo = (TH1D*)h_mass8->Clone();
 
+	for(int i=1; i<=histo->GetNbinsX(); i++)
+	{
+		double val = histo->GetBinContent(i);
+		//cout << "Bin Cont = " << val << endl;
+		//cout << "Bin edges = [" << histo->GetBinLowEdge(i) << " , " << histo->GetBinLowEdge(i+1) << " ]" << endl;
+		val = val/(histo->GetBinLowEdge(i+1)-histo->GetBinLowEdge(i));
+		histo->SetBinContent(i,val);
+	}
+
+	histo->Scale(1./histo->Integral(),"width");
+	cout << "Cont int = " << histo->Integral() << endl;
+	cout << "Math int = " << histo->Integral("width") << endl;
+
+	/*double sum=0.;
+	for(int i=1; i<=histo->GetNbinsX(); i++)
+	{
+		cout << histo->GetBinContent(i)*(histo->GetBinLowEdge(i+1)-histo->GetBinLowEdge(i)) << endl;
+		sum+=histo->GetBinContent(i)*(histo->GetBinLowEdge(i+1)-histo->GetBinLowEdge(i));
+	}
+
+	cout << "Sum = " << sum << endl;
+	*/
 	histo->SetLineWidth(2);
 
 	histo->SetLineColor(color);
 
 	histo->SetTitle("");
 	histo->GetXaxis()->SetRangeUser(0.,11.);
-	histo->GetYaxis()->SetRangeUser(0.,0.65);
+	histo->GetYaxis()->SetRangeUser(0.,4.4);
 	histo->GetXaxis()->SetTitle("Four-jet mass [TeV]");
 	histo->GetXaxis()->SetTitleSize(0.04);
 	histo->GetYaxis()->SetTitle("Normalized yield/TeV");
@@ -224,6 +246,28 @@ TH1D *h = new TH1D("h","",nMassBins,massBoundaries);
 h = (TH1D*)f1->Get("h_qq_Suu10_Chi2500");
 h->SetLineWidth(2);
 h->SetLineColor(6);
+
+for(int i=1; i<=h->GetNbinsX(); i++)
+{
+	double val = h->GetBinContent(i);
+	val = val/(h->GetBinLowEdge(i+1)-h->GetBinLowEdge(i));
+	h->SetBinContent(i,val);
+}
+
+h->Scale(1./h->Integral(),"width");
+
+cout << "Cont int = " << h->Integral() << endl;
+cout << "Math int = " << h->Integral("width") << endl;
+
+/*double sum=0.;
+for(int i=1; i<=h->GetNbinsX(); i++)
+{
+	cout << h->GetBinContent(i)*(h->GetBinLowEdge(i+1)-h->GetBinLowEdge(i)) << endl;
+	sum+=h->GetBinContent(i)*(h->GetBinLowEdge(i+1)-h->GetBinLowEdge(i));
+}
+
+cout << "Sum = " << sum << endl;
+*/
 h->Draw("same hist");
 
 sprintf(legentry, "M(S) = 10, M(#chi) = 2.5 TeV");
@@ -242,6 +286,7 @@ cms3->Draw();
 c->SaveAs("Figure_4_LHS_PAPER.png");
 c->SaveAs("Figure_4_LHS_PAPER.pdf");
 c->SaveAs("Figure_4_LHS_PAPER.C");
+
 
 }
 
